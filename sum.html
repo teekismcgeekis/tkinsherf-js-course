@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calculateForm() {
+    var x = parseInt(document.getElementById("input1").value);
+    var y = parseInt(document.getElementById("input2").value);
+
+    var sum = x + y;
+
+    document.getElementById("answer").innerHTML = "Total = " + sum;
+
+}
+</script>
+</head>
+<body>
+  <h1>Sum</h1>
+
+  Input 1: <input type="text" name="input1" id="input1"></br>
+  <p>
+    --Plus--
+  </p>
+  Input 2: <input type="text" name="input2" id="input2"></br>
+  </br>
+
+  <button onclick="calculateForm()">Submit</button>
+
+  <h3>Answer</h3>
+
+  <p id="answer"></p>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calculateForm() {
+    var x = parseInt(document.getElementById("input1").value);
+    var y = parseInt(document.getElementById("input2").value);
+
+    var ans = (x + y)*3;
+
+    document.getElementById("answer").innerHTML = "Total = " + ans;
+
+}
+</script>
+</head>
+<body>
+  <h1>Sum Tripled</h1>
+
+  Input 1: <input type="text" name="input1" id="input1"></br>
+  <p>
+    --Plus--
+  </p>
+  Input 2: <input type="text" name="input2" id="input2"></br>
+  <p>
+    --Multiplied by 3--
+  </p>
+  </br>
+
+  <button onclick="calculateForm()">Submit</button>
+
+  <h3>Answer</h3>
+
+  <p id="answer"></p>
+
+</body>
+</html>
