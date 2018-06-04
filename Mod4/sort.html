@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mod 4 - Sort</title>
+  <script>
+    var bands = ["Daft Punk"];
+
+    function addBand(){
+      var input = document.getElementById("userInput").value;
+      bands.push(input);
+      bands.sort();
+
+      //document.getElementById("results").innerHTML = "Band " + bands.toString();
+
+      var bandLength = bands.length;
+      text = "<ul>";
+      for (i = 0; i < bandLength; i++) {
+          text += "<li>" + bands[i] + "</li>";
+      }
+      text += "</ul>";
+      document.getElementById("test").innerHTML = text;
+
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="userInput" palceholder="Bandname"/></br>
+  <button onclick="addBand()">Add Band</button></br>
+
+  <h1>List of Bands Alphabetically:</h1>
+
+<!-- Test Element
+  <p id="results">
+
+  </p>
+-->
+
+  <p id="test">
+
+  </p>
+</body>
+
+</html>
