@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tkinsherf Madlib</title>
+	<link rel="stylesheet" href="themes/madlib.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <script>
+    function madLib(){
+      var name = document.getElementById("name").value;
+      var adj = document.getElementById("adjective").value;
+      var verb = document.getElementById("verb").value;
+      var noun = document.getElementById("noun").value;
+
+      document.getElementById("story").innerHTML = "There was a person named " + name + ". They were always " + adj + " though. Whenever they would " + verb + " it made them happy! Nothing could keep them from their favorite " + noun + ".";
+    }
+
+    function fantasyName() {
+      var name = document.getElementById("name").value;
+      var adj = document.getElementById("adjective").value;
+      var verb = document.getElementById("verb").value;
+      var noun = document.getElementById("noun").value;
+
+      var one = name.substr(0, 2);
+      var two = adj.substr(1, 3);
+      var three = verb.substr(1, 2);
+      var four = noun.substr(1, 3);
+
+      document.getElementById("fantasy").innerHTML = one + two + three + four;
+    }
+  </script>
+</head>
+<body>
+  <h1>A little story about:</h1>
+  <select></select>
+  <input type="text" id="name" placeholder="Name" />
+  <input type="text" id="adjective" placeholder="Adjective" />
+  <input type="text" id="verb" placeholder="Verb" />
+  <input type="text" id="noun" placeholder="Noun" />
+
+  <button onclick="madLib()">Story</button>
+  <button onclick="fantasyName()">Fantasy Name</button>
+
+
+  <p id="story">
+
+  </p>
+
+  <p id="fantasy">
+
+  </p>
+
+</body>
+</html>
