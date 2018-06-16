@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Module 6 - Calculate</title>
+  <script>
+    function bmiCalculate(){
+      var height = document.getElementById('height').value;
+      var weight = document.getElementById('weight').value;
+      var bmi = (weight / (height * height))*703;
+
+      document.getElementById("result").innerHTML = "Your BMI is: " + bmi;
+
+    }
+  </script>
+</header>
+<body>
+  <h1>BMI Calculator</h1></br>
+  Height:
+  <input type="text" id="height" placeholder="Height in inches (in)"/></br>
+  Weight:
+  <input type="text" id="weight" placeholder="Weight in pounds (lbs)"/></br>
+
+  <button onclick="bmiCalculate()">Submit</button>
+
+  <p id="result">
+
+  </p>
+  <p>
+    BMI	Weight Status </br>
+    Below 18.5	Underweight</br>
+    18.5 – 24.9	Normal</br>
+    25.0 – 29.9	Overweight</br>
+    30.0 and Above	Obese</br>
+  </p>
+
+</body>
+</html>
